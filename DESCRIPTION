@@ -19,4 +19,6 @@ Description: Implements a templating framework for mixing text and
         module.
 License: GPL-2
 Repository: CRAN
-Suggests: testthat
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

@@ -1,8 +1,4 @@
-library(testthat)
-library(brew)
-
 test_that("brew test file 1", {
-  local_edition(3)
   outfile = paste0(tempdir(),"/","test1.tex")
   brew("brew-test-1.brew",output=outfile, envir=new.env(),extendedErrorReport = TRUE)
 
@@ -39,7 +35,6 @@ test_that("brew test file 1", {
 })
 
 test_that("brew test file 2", {
-  local_edition(3)
   outfile = paste0(tempdir(),"/","test1.html")
   brew("brew-test-2.brew",output = outfile, envir = new.env(),extendedErrorReport = TRUE)
 
@@ -54,10 +49,6 @@ test_that("brew test file 2", {
 })
 
 test_that("brew test catprint", {
-  local_edition(3)
   expect_snapshot(brew("catprint.brew", envir = new.env(),extendedErrorReport = TRUE),
                   variant = "catprintTest")
 })
-
-
-  
