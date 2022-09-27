@@ -90,12 +90,11 @@ hr {background-color: #cccccc; border: 0px; height: 1px; color: #000000;}
 <% zebra('search()',search()) %><br/><hr/>
 <% zebra('.libPaths()',.libPaths()) %><br/><hr/>
 <% zebra('options()',options()) %><br/><hr/>
-<% zebra('Sys.getenv()',as.list(Sys.getenv())) %><br/><hr/>
 <% zebra('Sys.info()',as.list(Sys.info())) %><br/><hr/>
 <% zebra('.Machine',.Machine) %><br/><hr/>
 <% zebra('.Platform',.Platform) %><br/><hr/>
 <h1><a name="Attached_Packages"></a>Attached Packages</h1>
 <% lapply(sub('package:','',search()[grep('package:',search())]),zebrifyPackage) %>
 <h1><a name="Installed_Packages"></a>Installed Packages</h1>
-<% lapply(attr(installed.packages(),'dimnames')[[1]],zebrifyPackage) %>
+<% lapply(attr(installed.packages(priority = "base"),'dimnames')[[1]],zebrifyPackage) %>
 </body></html>
