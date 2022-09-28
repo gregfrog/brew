@@ -34,19 +34,19 @@ test_that("brew test file 1", {
   unlink(outfile)
 })
 
-test_that("brew test file 2", {
-  outfile = paste0(tempdir(),"/","test1.html")
-  brew("brew-test-2.brew",output = outfile, envir = new.env(),extendedErrorReport = TRUE)
-
-  announce_snapshot_file(name = outfile)
-  expect_snapshot_file(
-    path = outfile,
-    cran = FALSE,
-    compare = compare_file_text,
-    variant = "file2"
-  )
-  unlink(outfile)
-})
+# test_that("brew test file 2", {
+#   outfile = paste0(tempdir(),"/","test1.html")
+#   brew("brew-test-2.brew",output = outfile, envir = new.env(),extendedErrorReport = TRUE)
+# 
+#   announce_snapshot_file(name = outfile)
+#   expect_snapshot_file(
+#     path = outfile,
+#     cran = FALSE,
+#     compare = compare_file_text,
+#     variant = "file2"
+#   )
+#   unlink(outfile)
+# })
 
 test_that("brew test catprint", {
   expect_snapshot(brew("catprint.brew", envir = new.env(),extendedErrorReport = TRUE),

@@ -9,4 +9,4 @@
 library(testthat)
 library(brew)
 
-test_check("brew")
+test_check("brew", stop_on_failure = TRUE)

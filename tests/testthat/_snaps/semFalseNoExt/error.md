@@ -2,6 +2,4 @@
 
     Code
       brew("error.brew", envir = new.env(), extendedErrorReport = FALSE)
-    Output
-      Error Test
 

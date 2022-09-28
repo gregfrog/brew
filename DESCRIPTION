@@ -1,7 +1,7 @@
 Type: Package
 Package: brew
 Title: Templating Framework for Report Generation
-Version: 1.0-7
+Version: 1.0-8
 Authors@R: c(
     person("Jeffrey", "Horner", role = c("aut", "cph")),
     person("Greg", "Hunt", , "greg@firmansyah.com", role = c("aut", "cre", "cph"))

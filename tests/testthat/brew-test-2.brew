@@ -79,7 +79,6 @@ hr {background-color: #cccccc; border: 0px; height: 1px; color: #000000;}
 <a href="#<%=hrefify("search()")%>">search()</a><br/>
 <a href="#<%=hrefify(".libPaths()")%>">.libPaths()</a><br/>
 <a href="#<%=hrefify("options()")%>">options()</a><br/>
-<a href="#<%=hrefify("Sys.getenv()")%>">Sys.getenv()</a><br/>
 <a href="#<%=hrefify("Sys.info()")%>">Sys.info()</a><br/>
 <a href="#<%=hrefify(".Machine")%>">.Machine</a><br/>
 <a href="#<%=hrefify(".Platform")%>">.Platform</a><br/><hr/>
