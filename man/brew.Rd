@@ -35,11 +35,11 @@ brew(file=stdin(),output=stdout(),text=NULL,envir=parent.frame(),
 	brew syntax is quite simple and there are very few delimiters to learn:
 
 	\itemize{
-	\item{1.}{All text that falls outside of the delimiters is printed as-is.}
-	\item{2.}{R expressions between the '<\%' and '\%>' delimiters are executed in-place.}
-    \item{3.}{The value of the R expression between the '<\%=' and '\%>' delimiters is printed.}
-	\item{4.}{All text between the '<\%\#' and '\%>' delimiters is thrown away. Use it as a comment.}
-	\item{5.}{If you place a '-' just before the '\%>' delimiter, and it's placed at the end of a line, then the newline is omitted from the output.}
+	\item{1.} All text that falls outside of the delimiters is printed as-is.
+	\item{2.} R expressions between the '<\%' and '\%>' delimiters are executed in-place.
+  \item{3.} The value of the R expression between the '<\%=' and '\%>' delimiters is printed.
+	\item{4.} All text between the '<\%#' and '\%>' delimiters is thrown away. Use it as a comment.
+	\item{5.} If you place a '-' just before the '\%>' delimiter, and it's placed at the end of a line, then the newline is omitted from the output.
 	}
     
 	The following template contains syntax to exercise all \code{brew} functionality:
@@ -73,8 +73,8 @@ foo is still bar.
 	Also, for power users, there's one more thing:
 
 	\itemize{
-	\item{6.}{Text between the '<\%\%' and '\%\%>' delimiters is treated as a brew template and
-      is printed as-is, but the delimiters are changed to '<\%' and '\%>'. This happens when tplParser=NULL. But if tplParser is a valid function, then the text is passed to tplParser which should return a character vector to replace the text.}
+	\item{6.} Text between the '<\%\%' and '\%\%>' delimiters is treated as a brew template and
+      is printed as-is, but the delimiters are changed to '<\%' and '\%>'. This happens when tplParser=NULL. But if tplParser is a valid function, then the text is passed to tplParser which should return a character vector to replace the text.
 	}
 
 	NOTE: brew calls can be nested and rely on placing a function named '.brew.cat' in the environment in which it is passed. Each time brew is called, a check for the existence of this function is made. If it exists, then it is replaced with a new copy that is lexically scoped to the current brew frame. Once the brew call is done, the function is replaced with the previous function. The function is finally removed from the environment once all brew calls return.
